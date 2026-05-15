@@ -84,8 +84,6 @@ The experiments are conducted on:
 
 - CMU-MOSI
 - CMU-MOSEI
-- IEMOCAP
-- SIMS
 
 Please prepare the datasets following the preprocessing pipeline of MPLMM.
 
@@ -96,7 +94,6 @@ data/
 ├── MOSI/
 ├── MOSEI/
 ├── IEMOCAP/
-└── SIMS/
 ```
 
 ---
@@ -115,20 +112,6 @@ For missing-modality training:
 python train.py --dataset mosi --drop_rate 0.7
 ```
 
----
-
-# Main Results
-
-| Dataset | Metric | MPLMM | RGR-MPLMM |
-|---|---|---|---|
-| MOSI | ACC | 64.51 | 65.34 |
-| MOSI | F1 | 65.75 | 66.90 |
-| MOSEI | ACC | 70.83 | 71.01 |
-| MOSEI | F1 | 77.04 | 77.17 |
-
-RGR-MPLMM shows larger improvements under heavy missing-modality settings.
-
----
 
 # Citation
 
