@@ -52,8 +52,8 @@ src/
 ├── model.py              # Model architecture
 ├── train.py              # Training pipeline
 ├── mosidata.py           # CMU-MOSI dataloader
-├── simsdata.py           # SIMS dataloader
-├── iemodata.py           # IEMOCAP dataloader
+├── moseidata.py           # CMU-MOESI dataloader
+├── iemodata.py           # IEMOCAP dataloader(more)
 ├── eval_metrics.py       # Evaluation metrics
 └── utils.py              # Utility functions
 ```
