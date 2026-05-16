@@ -84,6 +84,7 @@ The experiments are conducted on:
 
 - CMU-MOSI
 - CMU-MOSEI
+https://www.dropbox.com/scl/fo/l2mla2gzqbiksyieylmyd/AGIJtzEHcYNhgMVs1fBYeSo?rlkey=5bj4n59ypou9l81m1lcocpxrb&e=1&dl=0
 
 Please prepare the datasets following the preprocessing pipeline of MPLMM.
 
@@ -93,7 +94,7 @@ Dataset files should be organized as:
 data/
 ├── MOSI/
 ├── MOSEI/
-├── IEMOCAP/
+├── IEMOCAP/（one more chice）
 ```
 
 ---
@@ -102,15 +103,12 @@ data/
 
 Example:
 
-```bash
-python train.py --dataset mosi
-```
 
-For missing-modality training:
+#  pretrain CMU-MOSEI
+python main.py --dataset "mosei" --data_path "./dataset/mosei_senti_data.pkl" --drop_rate 0 --name "./pretrained/mosei.pt"
 
-```bash
-python train.py --dataset mosi --drop_rate 0.7
-```
+#  fine-tuning CMU-MOSI
+python main.py --pretrained_model "./pretrained/mosei.pt" --dataset "mosi" --data_path "./dataset/mosi_data.pkl" --drop_rate 0.7 --name "./pretrained/mosi.pt"
 
 
 # Citation
